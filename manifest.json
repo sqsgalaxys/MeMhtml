@@ -3,9 +3,17 @@
     "description": "save mhtml",
     "version": "2.0",
     "permissions": [
-        "tabs",
+        "activeTab",
+        "browsingData",
+        "contextMenus",
         "downloads",
-        "pageCapture"
+        "pageCapture",
+        "storage" ,
+        "tabs",
+        "tabs", 
+        "<all_urls>",
+        "webNavigation",
+        "webRequestBlocking"
     ],
     "background": {
         "scripts": [
@@ -16,5 +24,19 @@
     "browser_action": {
         "default_title": "save mhtml"
     },
-    "manifest_version": 2
+    "icons": {
+        "128": "img/icon128.png",
+        "16": "img/icon16.png",
+        "48": "img/icon48.png"
+    },
+    "manifest_version": 2,
+    "commands": {
+        "save-mhtml-file": {
+            "description": "save mhtml download",
+            "suggested_key": {
+                "default": "Alt+H",
+                "mac": "Alt+H"
+            }
+        }
+    }
 }
